@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+  web:
+    image: tse:15.0
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+      - "8071:8071"
+      - "8072:8072"
+    volumes:
+      - /c/Users/marc.aubry/Documents/GitHub/tse15:/mnt/extra-addons
+      - /c/Users/marc.aubry/Documents/GitHub/odoo15:/mnt/odoo
+      - /c/Users/marc.aubry/Documents/GitHub/enterprise15:/mnt/enterprise
+      - /c/Users/marc.aubry/Documents/odoo-web-data:/var/lib/odoo
+    environment:
+      - PGHOST=db
+      - PGUSER=odoo
+      - PGPASSWORD=odoo
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo

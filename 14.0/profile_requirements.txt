@@ -1,0 +1,16 @@
+ipython==7.26.0
+ipython-genutils==0.2.0
+ipykernel==6.2.0
+matplotlib==3.2.2
+matplotlib-inline==0.1.2
+Pygments==2.10.0
+pickleshare==0.7.5
+keyring==23.1.0
+cryptography==3.4.7
+jupyterlab-server==1.2.0
+jupyterlab==2.3.2
+arcgis==1.6.2.post1
+unidecode==1.2.0
+PyJWT==2.1.0
+markdown
+pydevd-pycharm
